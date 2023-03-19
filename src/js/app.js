@@ -1,26 +1,10 @@
-/* eslint-disable import/extensions */
-/* eslint-disable arrow-body-style */
-import json from './parser.js';
-import read from './reader.js';
+import GameSavingLoader from './gamesavingloader';
 
-export default class GameSavingLoader {
-  static load() {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        read()
-          .then((val) => val)
-          .then((data) => {
-            const value = json(data);
-            resolve(value);
-          });
-      }, 1000);
-    });
+(async () => {
+  try {
+    const prossedData = await GameSavingLoader.load();
+    return prossedData;
+  } catch (error) {
+    return error;
   }
-}
-
-GameSavingLoader.load().then((saving) => {
-  return JSON.parse(saving);
-}, (error) => {
-  return error;
-});
-//GameSavingLoader.load();
+})();
