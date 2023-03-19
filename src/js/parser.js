@@ -1,4 +1,3 @@
-/* eslint-disable */
 export default function json(data) {
   return new Promise((resolve, reject) => {
     // эмуляция обработки ArrayBuffer
