@@ -1,1 +1,1 @@
-### 🌟 Домашняя работа Async Await 🌟
+[![Build status](https://ci.appveyor.com/api/projects/status/nqyc54nsynommjln?svg=true)](https://ci.appveyor.com/project/Andrey09123/async-1)
